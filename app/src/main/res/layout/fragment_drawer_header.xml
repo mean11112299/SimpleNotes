@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    tools:context="com.windyroad.nghia.simplenotes.views.others.DrawerHeaderFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/app_primary">
+
+    <LinearLayout
+        style="@style/app_list_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_toolbar_height">
+
+        <ImageView
+            style="@style/app_list_item_icon"
+            android:src="@android:drawable/ic_menu_call" />
+
+        <TextView
+            style="@style/app_list_item_title"
+            android:orientation="vertical"
+            android:textSize="@dimen/app_text_title"
+            android:text="User"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

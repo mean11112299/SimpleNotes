@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.windyroad.nghia.simplenotes.views.memo.AddMemoActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_Content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--layout app toolbar-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar_Main"
+                layout="@layout/app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!--Giao điện Chính-->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/layout_MainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                    <EditText
+                        android:id="@+id/editText_Title"
+                        style="@style/appTextTitle.light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_title" />
+
+                    <EditText
+                        android:id="@+id/editText_Memo"
+                        style="@style/appTextBody1.light"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top|start"
+                        android:hint="@string/prompt_memo"
+                        android:inputType="textMultiLine"
+                        android:minLines="10" />
+
+                </LinearLayout>
+
+                <!--tag-->
+                <LinearLayout
+                    style="@style/app_form_content"
+                    android:id="@+id/view_Tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/app_form_icon"
+                        android:contentDescription="@string/prompt_tags"
+                        android:src="@drawable/ic_tag_48dp" />
+
+                    <Button
+                        android:id="@+id/editText_Tags"
+                        style="@style/app_form_input_clear"
+                        android:hint="@string/prompt_tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--date time-->
+                <LinearLayout
+                    style="@style/app_form_content"
+                    android:id="@+id/view_DateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        style="@style/app_form_icon"
+                        android:contentDescription="@string/prompt_datetime"
+                        android:src="@drawable/ic_calendar_48dp" />
+
+                    <Button
+                        android:id="@+id/editText_DateTime"
+                        style="@style/app_form_input_clear"
+                        android:hint="@string/prompt_datetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--location-->
+                <LinearLayout
+                    style="@style/app_form_content"
+                    android:id="@+id/view_Location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        style="@style/app_form_icon"
+                        android:contentDescription="@string/prompt_location"
+                        android:src="@drawable/ic_my_location_48dp" />
+
+                    <Button
+                        android:id="@+id/editText_Location"
+                        style="@style/app_form_input_clear"
+                        android:hint="@string/prompt_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <!--weather-->
+                <LinearLayout
+                    style="@style/app_form_content"
+                    android:id="@+id/view_Weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        style="@style/app_form_icon"
+                        android:contentDescription="@string/prompt_weather"
+                        android:src="@drawable/ic_weather_icons_48dp" />
+
+                    <Button
+                        android:id="@+id/editText_Weather"
+                        style="@style/app_form_input_clear"
+                        android:hint="@string/prompt_weather"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/listView_Attach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ListView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--Action button-->
+        <!--<android.support.design.widget.FloatingActionButton
+            android:id="@+id/action_add_note"
+            style="@style/fabStyle"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/app_spacing_large"
+            android:src="@drawable/ic_add_white_48dp"/>-->
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

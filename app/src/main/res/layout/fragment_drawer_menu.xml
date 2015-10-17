@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    tools:context="com.windyroad.nghia.simplenotes.views.others.DrawerMenuFragment">
+
+    <!--<ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--header-->
+            <fragment
+                android:id="@+id/fragment"
+                android:name="com.windyroad.nghia.simplenotes.views.others.DrawerHeaderFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_drawer_header" />
+
+            <!--Không có Divider, chọn 1, màu chọn-->
+            <!--TODO không thực hiện được việc đẩy header lên-->
+            <ListView
+                android:id="@+id/listView_MenuItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@color/app_control_highlight_background" />
+
+        </LinearLayout>
+
+    <!--</ScrollView>-->
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Button dạng EditText nhỏ-->
+    <style name="appButtonEditTextSmall">
+        <item name="android:textSize">@dimen/app_text_caption</item>
+        <item name="android:textColor">@color/app_text_secondary.light</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+</resources>

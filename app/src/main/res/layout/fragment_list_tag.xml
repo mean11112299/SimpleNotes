@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <!--Giao điện Chính-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layout_MainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                style="@style/app_form_content"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    style="@style/app_form_icon"
+                    android:src="@drawable/ic_cancel_white_24dp"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/app_form_input_clear"/>
+
+                <ImageView
+                    style="@style/app_form_sub_icon"
+                    android:src="@drawable/ic_add_white_48dp"
+                    android:layout_width="@dimen/app_form_icon_size"
+                    android:layout_height="@dimen/app_form_icon_size" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listView_Tag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+        </LinearLayout>
+
+</LinearLayout>

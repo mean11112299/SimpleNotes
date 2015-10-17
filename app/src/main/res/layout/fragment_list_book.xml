@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Layout có Animation mới-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_Content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--layout app toolbar-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar_Main"
+                layout="@layout/app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!--Giao điện Chính-->
+        <ListView
+            android:orientation="vertical"
+            android:id="@+id/layout_MainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </ListView>
+
+        <!--Action button-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/action_add_note"
+            style="@style/fabStyle"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/app_spacing_large"
+            android:src="@drawable/ic_add_white_48dp"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

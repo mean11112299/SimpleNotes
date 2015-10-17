@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--chỉ chọn 1 item-->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/action_notebooks"
+            android:checked="true"
+            android:title="@string/title_book"/>
+
+        <!--Chọn mặc định-->
+        <item
+            android:id="@+id/action_all_notes"
+            android:checked="true"
+            android:title="@string/title_about"/>
+
+    </group>
+
+    <!-- submenu -->
+    <item android:id="@+id/file" android:title="Sub menu" >
+        <menu>
+            <item android:id="@+id/action_settings"
+                android:title="@string/action_settings" />
+        </menu>
+    </item>
+
+    <group>
+        <menu>
+            <item android:id="@+id/action_settings1"
+                android:title="@string/action_settings" />
+        </menu>
+    </group>
+
+</menu>
