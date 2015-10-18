@@ -39,5 +39,6 @@
     <string name="title_attack">Attach</string>
     <string name="title_info">Info</string>
     <string name="action_save">Save</string>
+    <string name="prompt_search">Search keyword</string>
 
 </resources>

@@ -69,7 +69,7 @@ public class ListTagFragment extends Fragment {
      * Cài đặt Toolbar
      */
     private void setupToolbar(){
-        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_Main);
+        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         AppCompatActivity activity = ((AppCompatActivity) getActivity());
         activity.setSupportActionBar(toolbar);
 

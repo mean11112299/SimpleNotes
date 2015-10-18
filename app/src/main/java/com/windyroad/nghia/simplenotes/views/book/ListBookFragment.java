@@ -3,9 +3,7 @@ package com.windyroad.nghia.simplenotes.views.book;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.windyroad.nghia.common.activity.ActivityUtil;
 import com.windyroad.nghia.simplenotes.R;
 
 /**
@@ -39,7 +38,11 @@ public class ListBookFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        setupToolbar();
+        ActivityUtil.setupToolbar(
+                (AppCompatActivity)getActivity(), R.id.toolbar,
+                true, R.drawable.ic_menu_48dp,
+                false, null);
+
     }
 
     @Override
@@ -53,26 +56,6 @@ public class ListBookFragment extends Fragment {
         switch (item.getItemId()){
             default:
                 return super.onOptionsItemSelected(item);
-        }
-    }
-
-    /**
-     * Cài đặt Toolbar
-     */
-    private void setupToolbar(){
-        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_Main);
-        AppCompatActivity activity = ((AppCompatActivity) getActivity());
-        activity.setSupportActionBar(toolbar);
-
-        ActionBar actionBar = activity.getSupportActionBar();
-        if (actionBar != null) {
-
-            /*actionBar.setDisplayHomeAsUpEnabled(true);  // hiển thị Home/ Up
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_48dp);  // đổi ảnh Home
-
-            // Hiện icon
-            actionBar.setHomeButtonEnabled(true);
-            actionBar.setIcon(ContextCompat.getDrawable(this, R.mipmap.ic_launcher));*/
         }
     }
 }

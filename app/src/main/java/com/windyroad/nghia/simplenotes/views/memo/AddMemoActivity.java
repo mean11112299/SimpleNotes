@@ -82,7 +82,7 @@ public class AddMemoActivity extends AppCompatActivity {
      * Cài đặt Toolbar
      */
     private void setupToolbar(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_Main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();

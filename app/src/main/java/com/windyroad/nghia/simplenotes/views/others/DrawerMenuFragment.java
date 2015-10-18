@@ -96,7 +96,7 @@ public class DrawerMenuFragment extends Fragment {
     private void initVars() {
         mListMenuItem = new ArrayList<DrawerMenuItem>();
 
-        mListMenuItem.add(new DrawerMenuItem(R.drawable.ic_notebook_48dp, getString(R.string.title_book), ""));
+        mListMenuItem.add(new DrawerMenuItem(R.drawable.ic_book_48dp, getString(R.string.title_book), ""));
         mListMenuItem.add(new DrawerMenuItem(R.drawable.ic_memo_48dp, getString(R.string.title_memos), ""));
         mListMenuItem.add(new DrawerMenuItem(R.drawable.ic_tag_48dp, getString(R.string.title_tags), ""));
         mListMenuItem.add(new DrawerMenuDivider());  // line

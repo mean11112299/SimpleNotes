@@ -19,12 +19,22 @@
             android:layout_height="wrap_content">
 
             <include
-                android:id="@+id/toolbar_Main"
+                android:id="@+id/toolbar"
                 layout="@layout/app_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <include
+                android:id="@+id/searchCommon"
+                layout="@layout/layout_search_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <!--todo slide down max height-->
+
         </android.support.design.widget.AppBarLayout>
+
 
         <!--Giao điện Chính-->
         <ListView
@@ -32,7 +42,7 @@
             android:id="@+id/layout_MainContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
         </ListView>
 

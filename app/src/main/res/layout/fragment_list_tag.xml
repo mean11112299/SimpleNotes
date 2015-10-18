@@ -21,7 +21,7 @@
 
                 <ImageView
                     style="@style/app_form_icon"
-                    android:src="@drawable/ic_cancel_white_24dp"/>
+                    android:src="@drawable/ic_cancel_48dp"/>
 
                 <EditText
                     android:layout_width="0dp"
