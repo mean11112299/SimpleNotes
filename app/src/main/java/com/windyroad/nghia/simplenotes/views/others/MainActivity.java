@@ -18,6 +18,7 @@ import com.windyroad.nghia.common.FragmentUtils;
 import com.windyroad.nghia.common.activity.BaseActivity;
 import com.windyroad.nghia.common.drawer.DrawerMenuItem;
 import com.windyroad.nghia.simplenotes.R;
+import com.windyroad.nghia.simplenotes.views.book.ListBookFragment;
 import com.windyroad.nghia.simplenotes.views.memo.ListMemoFragment;
 import com.windyroad.nghia.simplenotes.views.tag.ListTagFragment;
 
@@ -31,7 +32,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setUpToolbar();
+        //setUpToolbar();
         setupDrawerMenu();
         findViews();
         initVars();
@@ -86,7 +87,7 @@ public class MainActivity extends BaseActivity {
 
     /**
      * Cài đặt Toolbar
-     */
+     *//*
     private void setUpToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_Main);
         setSupportActionBar(toolbar);
@@ -101,7 +102,7 @@ public class MainActivity extends BaseActivity {
             actionBar.setHomeButtonEnabled(true);
             actionBar.setIcon(ContextCompat.getDrawable(this, R.mipmap.ic_launcher));
         }
-    }
+    }*/
 
     /** Cài đặt Drawer Menu */
     private void setupDrawerMenu() {
@@ -127,7 +128,9 @@ public class MainActivity extends BaseActivity {
             // Tìm fragment
             Fragment fragment = null;
             Class fragmentClass = ListMemoFragment.class;
-            if (menuItem.getTitle().equals(getString(R.string.title_memos))){
+            if (menuItem.getTitle().equals(getString(R.string.title_book))){
+                fragmentClass = ListBookFragment.class;
+            } else if (menuItem.getTitle().equals(getString(R.string.title_memos))){
                 fragmentClass = ListMemoFragment.class;
             } else if (menuItem.getTitle().equals(getString(R.string.title_tags))) {
                 fragmentClass = ListTagFragment.class;
