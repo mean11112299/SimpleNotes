@@ -3,6 +3,11 @@ package com.windyroad.nghia.common.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
+import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 /**
  * Created by Nghia-PC on 7/9/2015.
@@ -47,6 +52,39 @@ public class ActivityUtil {
             activity.setResult(Activity.RESULT_OK, data);
         } else {
             activity.getParent().setResult(Activity.RESULT_OK, data);
+        }
+    }
+
+    /**
+     * Cài đặt Toolbar trong Activity
+     * @param appCompatActivity Activity
+     * @param toolbarId id của Toolbar
+     * @param displayHomeAsUp
+     * @param homeAsUpIndicatorId id ảnh của nút Home
+     * @param displayIcon
+     * @param iconId id ảnh của Icon
+     */
+    public static void setupToolbar(AppCompatActivity appCompatActivity, int toolbarId,
+                                    boolean displayHomeAsUp, @Nullable Integer homeAsUpIndicatorId,
+                                    boolean displayIcon, @Nullable Integer iconId){
+        // lấy Toolbar
+        Toolbar toolbar = (Toolbar) appCompatActivity.findViewById(toolbarId);
+        appCompatActivity.setSupportActionBar(toolbar);
+
+        ActionBar actionBar = appCompatActivity.getSupportActionBar();
+        if (actionBar != null) {
+
+            // hiện Button Home hay Up
+            actionBar.setDisplayHomeAsUpEnabled(displayHomeAsUp);  // hiển thị Home/ Up
+
+            if (homeAsUpIndicatorId != null)
+                actionBar.setHomeAsUpIndicator(homeAsUpIndicatorId);  // đổi ảnh Home, Up
+
+            // Hiện icon
+            actionBar.setHomeButtonEnabled(displayIcon);
+
+            if (iconId != null)
+                actionBar.setIcon(ContextCompat.getDrawable(appCompatActivity, iconId));
         }
     }
 }

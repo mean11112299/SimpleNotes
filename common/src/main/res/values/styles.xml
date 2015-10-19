@@ -6,6 +6,8 @@
     </style>
 
     <style name="appTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--font mặc định-->
+        <item name="android:fontFamily">monospace</item>
         <!--Apply All TextView-->
         <item name="android:textViewStyle">@style/appTextBody1.light</item>
         <!--<item name="android:buttonStyle">@style/app_button</item>-->
