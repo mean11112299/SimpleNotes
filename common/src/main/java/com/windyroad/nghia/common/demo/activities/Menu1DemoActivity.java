@@ -44,7 +44,7 @@ public class Menu1DemoActivity extends AppCompatActivity {
 
     /** Khởi tạo Toolbar */
     private void initToolbar() {
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_Main);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();
